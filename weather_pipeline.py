@@ -32,6 +32,14 @@ try:
 
     df = pd.DataFrame([weather_data])
 
+    df["temperature"] = pd.to_numeric(df["temperature"], errors="coerce")
+    df["humidity"] = pd.to_numeric(df["humidity"], errors="coerce")
+    df["pressure"] = pd.to_numeric(df["pressure"], errors="coerce")
+    df["wind_speed"] = pd.to_numeric(df["wind_speed"], errors="coerce")
+
+    df = df.dropna()
+    df = df.drop_duplicates()
+
     print("Extracted Weather Data:")
     print(df)
 
