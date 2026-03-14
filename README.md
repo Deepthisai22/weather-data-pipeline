@@ -1,23 +1,21 @@
 # Weather Data Pipeline
 
-This project builds a real-time weather data pipeline using Python, PostgreSQL, and Streamlit.
+This project builds a real-time weather data pipeline using Python, PostgreSQL
 
 ## Architecture
 
-Weather API → Python ETL → PostgreSQL → Scheduler → Streamlit Dashboard
+Weather API → python Script -> Data Handling -> storage (postgresql)
 
 ## Technologies Used
 
-- Python
 - OpenWeather API
+- python
 - PostgreSQL
 - SQLAlchemy
-- Streamlit
 - Schedule Library
 
 ## Features
 
 - Fetches weather data every 5 minutes
 - Stores historical weather data
-- Displays weather dashboard
 - Shows temperature trend over time
